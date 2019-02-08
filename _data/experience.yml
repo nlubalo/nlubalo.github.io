@@ -1,0 +1,31 @@
+- title: Senior Data Engineer
+  company: Ringier AG.
+  dates: July 2023 - Present
+  description:
+    - Designed and maintained large-scale data infrastructure supporting both batch and streaming pipelines for property listings, user behavior, and marketplace transactions — handling billions of records daily.
+    - Improved data pipeline reliability by 40% reducing data delivery latency and increasing platform data freshness through proactive validation, monitoring, and error recovery. 
+    - Owned data quality and governance across critical assets, including user engagement, lead generation, and listing performance — with strict controls around AWS access, S3 data lakes, and Redshift warehouses.-
+    - Mentored junior engineers and analysts, sharing best practices on marketplace data modeling, pipeline orchestration, and real-time feature engineering to support personalization and recommendations.
+
+- title: Data Engineer
+  company: Dalberg Data Insights.
+  dates: Jan 2020 - June 2023
+  description:
+    -  Automated Data Workflows - Implemented Apache Airflow to automate data pipelines, increasing team productivity by 30% and ensuring critical tasks ran during off-peak hours, thereby reducing peak-time latency by 25%.
+    -  Scalable data processing - esigned and deployed a dockerized pipeline for a telecom client, efficiently processing 20 TB of call records daily and reducing processing time by 50%..
+    -  Enhanced Code Quality -  Restructured existing codebases and integrated CI/CD pipelines with unit testing and automated data checks, leading to a 40% improvement in data reliability and trustworthiness.
+
+
+- title: Data Scientist
+  company: Tabiri Analytics.
+  dates: Jan 2019 - June 2021
+  description:
+    - Designed and implemented statistical threat hunting models that analyzed millions of security logs to proactively detect suspicious activity, reducing the log review workload for cybersecurity engineers by 75% and accelerating incident response.
+    - Developed an interactive dashboard to visualize threat model outputs and enabled cybersecurity engineers to provide feedback on false positives and false negatives, improving model accuracy and operational efficiency
+
+
+- title: Software Engineer
+  company: Kemri Faces
+  dates: July 2015 - June 2017
+  description:
+    - Developed a web-based point of care Health Register that combined the five Maternal and Child Health registers. This improved efficiency of the nurses, reducing long queues and increased the number of expectant mothers who completed all the antenatal visits.

@@ -1,0 +1,70 @@
+---
+title: "Authors"
+layout: default
+permalink: "/about.html"
+---
+
+<div class="container">
+  <div class="custom-content-wrapper">
+
+    <div class="row g-4 align-items-center">
+      <div class="col-md-4">
+        <img src="assets/images/nlubalo.jpeg" alt="Your Name" class="img-fluid mb-4 rounded about-hero-image">
+      </div>
+      <class class="col-md-8">
+        <h2>About Me</h2>
+        <p>I'm Nancy - a Senior Data Engineer who turns messy data into businesses gold.
+          With 6+ years of experience from fullstack dev to AI-Powered analytics,
+          I build pipelines, strategies and solutions that make data work harder for your business.
+          </p>
+          <p>I am fluent in PySpark, SQL, Python, dbt, cloud data platforms and data governance. I know how to pair that technical
+            expertise with AI and LLM-driven insights to unlock business growth </p>
+            <p> I live in the intersection of engineering, insights and innovation - where ideas turn into impact and complex problems find elegant, scalable solutions</p>
+</class>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+
+        <h2 class="mt-5 text-center">Skills</h2>
+        <div class="expertise-list text-center mb-5">
+            <span>SQL</span> | <span>AWS Cloud</span> | <span>Apache Iceberg</span> | <span>Data Analytics</span> | <span>Apache Spark</span> | <span>Palantir Foundry</span> | <span>Docker</span>  | <span>Agentic AI</span>
+        </div>
+
+        <h2 class="mt-5 text-center">Work Experience</h2>
+        <div class="experience-list">
+          {% for job in site.data.experience %}
+          <details class="experience-item">
+            <summary>
+              <div class="job-header">
+                <span class="job-title">{{ job.title }} at {{ job.company }}</span>
+                <span class="job-dates">{{ job.start_date }} - {{ job.end_date }}</span>
+              </div>
+            </summary>
+      
+            <div class="job-description">
+              <ul>
+            {% for point in job.description %}
+            <li>{{ point }}</li>
+            {% endfor %}
+            </ul>
+            </div>
+          </details>
+          {% endfor %}
+        </div>
+
+        <h2 class="mt-5 text-center">Education</h2>
+        <div class="education-list mb-5">
+            <ul>
+                <li><strong>Master of Science in Information Technology</strong> - Carnegie Mellon University (2017-2019)</li>
+                <li><strong>Bachelor of Computer Science</strong> - Masinde Muliro University (2011-2015)</li>
+            </ul>
+        </div>
+
+      </div>
+    </div>
+    
+  </div>
+</div>

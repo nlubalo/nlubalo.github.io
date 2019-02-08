@@ -1,0 +1,4 @@
+company,title,start_date,end_date,description
+"Ringier AG","Senior Data Engineer","July 2023","Present","Designed and maintained large-scale data infrastructure supporting both batch and streaming pipelines for property listings, user behavior, and marketplace transactions — handling billions of records daily."
+"Microsoft","Program Manager","Jun 2018","Dec 2019","Led a cross-functional team to launch a new product..."
+"Apple","Associate PM","Feb 2016","May 2018","Assisted in product strategy and user research for the team..."
