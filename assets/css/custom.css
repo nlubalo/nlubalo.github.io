@@ -1,0 +1,339 @@
+:root {
+  --primary-bg: #f8f8f8; /* Light gray background */
+  --text-color: #050505; /* Dark gray text */
+  --accent-color: #d81159; /* The yellow accent color */
+  --link-color: #d81159;
+  
+  /* Standardize Font and Spacing Variables */
+  --font-body: 'Inter', sans-serif;
+  --font-heading: 'Inter', sans-serif;
+  --font-weight-light: 200;
+  --font-weight-regular: 300;
+  --font-weight-bold: 700;
+  --line-height-body: 1.5;
+  --line-height-heading: 1.2;
+}
+
+body {
+  background-color: var(--primary-bg);
+  color: var(--text-color);
+  font-family: var(--font-body);
+  font-weight: var(--font-weight-light);
+  line-height: var(--line-height-body);
+}
+
+a {
+  color: var(--link-color);
+}
+
+/* Global Heading Styles */
+h1, h2, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-heading);
+  color: var(--accent-color);
+  letter-spacing: -0.01em;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  
+}
+
+/* Global Paragraph and List Styles */
+p, li {
+  font-family: var(--font-body);
+  font-weight: var(--font-weight-light);
+  font-size: 1.1rem;
+  line-height: var(--line-height-body);
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+/* Specific component styles are kept as they are for layout */
+
+/* Header Container */
+.site-header {
+  background-color: white;
+  padding: 1rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+/* Logo and Title */
+.site-title {
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+  display: block;
+  padding: 0;
+}
+
+/* Navigation Menu */
+.site-nav {
+  list-style-type: none;
+  padding: 0;
+  margin: 1rem 0 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Adds spacing between menu items */
+}
+
+/* Post Grid */
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+/* Post Card */
+.post-card {
+  background-color: white;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.post-card h2 {
+  padding: 1rem;
+  font-size: 1.25rem;
+}
+
+.btn-primary {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  color: var(--text-color);
+  font-weight: var(--font-weight-bold);
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+/* Navbar and Hero Section */
+#MagicMenu {
+    position: fixed !important;
+    top: 0 !important;
+    width: 100% !important;
+    z-index: 1030 !important;
+}
+
+body {
+    padding-top: 70px; /* Adjust this value to be equal to your navbar's height */
+}
+
+.hero {
+  padding: 8rem 0;
+  background-color: var(--primary-bg);
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-heading);
+}
+
+.hero p.lead {
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-light);
+  max-width: 600px;
+  margin: 1.5rem auto;
+}
+
+.hero .btn-primary {
+  background-color: var(--accent-color);
+  color: #fff;;
+  font-weight: var(--font-weight-bold);
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  border-color: var(--text-color) !important;
+}
+
+a.btn-primary:hover {
+  background-color: #f49cbb;
+  border-color: var(--text-color) !important;
+}
+a.btn-primary:active {
+  background-color: #f49cbb !important;
+  border-color: var(--text-color) !important;
+}
+a.btn-primary:focus {
+  background-color: #f49cbb !important;
+  border-color: var(--text-color) !important;
+}
+
+/* Post and About Page Specifics */
+.post-hero {
+    padding: 4rem 0;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.post-hero .post-title {
+    font-size: 3rem;
+    font-weight: var(--font-weight-bold);
+}
+
+.post-hero .post-meta {
+    color: #888;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.post-content {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.15rem;
+    line-height: var(--line-height-body);
+}
+
+.post-content h2, .post-content h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.post-content p {
+    margin-bottom: 1.5rem;
+}
+
+.post-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.custom-content-wrapper {
+    padding-left: 10px;
+    padding-right: 20px;
+    padding-top: 40px;
+}
+
+.about-page-content {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.about-page-content .row {
+    align-items: center;
+}
+
+.about-hero-image {
+    width: 100%;
+    height: auto;
+    border: 5px solid #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-right: 2rem;
+}
+
+.about-page-content h1.display-4 {
+    margin-bottom: 1rem;
+}
+
+.about-page-content h2, .about-page-content h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.about-page-content p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 767.98px) {
+    .about-page-content .row {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-page-content .col-md-4 {
+        margin-bottom: 2rem;
+    }
+}
+
+.experience-list {
+    margin-top: 2rem;
+}
+
+.experience-item {
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+.experience-item summary {
+    cursor: pointer;
+    outline: none;
+}
+
+.experience-item summary .job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.experience-item summary .job-title {
+    font-weight: var(--font-weight-bold);
+}
+
+.experience-item summary .job-dates {
+    color: #888;
+    font-size: 1rem;
+}
+
+.experience-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.experience-item[open] summary .job-header {
+    font-weight: var(--font-weight-bold);
+}
+
+.experience-item .job-description {
+    padding-top: 1rem;
+}
+
+.nav-link {
+  font-family: var(--font-body);
+  font-weight: var(--font-weight-light);
+  color: var(--text-color); /* Inherit the main body text color */
+}
+
+/* Style for hover and active state */
+.nav-link:hover{
+  color: var(--accent-color);
+}
+.nav-link:focus {
+  color: var(--accent-color); /* Use the yellow accent color on hover/focus */
+}
+.text-accent {
+    color: var(--accent-color);
+}
+
+p::first-letter {
+    font-size: 1em; /* Resets the font size to the normal size */
+    font-weight: normal; /* Resets the font weight */
+}
+.post-card {
+  background-color: #e9ecef;
+  border-radius: 10px;
+  padding-top: 0px;
+  color: #0a100d !important;
+
+}
+.post-card .img-fluid {
+  height: 200px;
+  width: 500px;
+}
+.bg-custom-gray {
+  background-color: #e9ecef !important;
+}
+.jumbotron h2, .jumbotron p {
+    font-family: var(--font-body);
+    font-weight: var(--font-weight-light);
+}
+.nav-link {
+    font-family: var(--font-body) !important;
+    font-weight: var(--font-weight-light) !important;
+    line-height: var(--line-height-body) !important;
+}
