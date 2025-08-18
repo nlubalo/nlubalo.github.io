@@ -15,13 +15,13 @@ This page documents my journey, broken into weekly milestones — each link goes
 #### Phase 1: Core AI & LLM Foundations (Months 1–2)
 
 - **Week 1 → [Data Loading, Tokenization & Embeddings Playground]**
-  Build the foundation by preparing text datasets, applying tokenization, and setting up embeddings. Then trained word embeddings (Word2Vec-style) and visualized how words cluster semantically in vector space
+  Build the foundation by preparing text datasets, applying tokenization, and setting up embeddings. Then trained word embeddings (Word2Vec-style) and visualize how words cluster semantically in vector space
 - **Week 2 → [Attention Mechanism from Scratch]**
-  Implement scaled dot-product attention (Queries, Keys, Values). Visualized attention heatmaps.
+  Implement scaled dot-product attention (Queries, Keys, Values). Visualize attention heatmaps.
 - **Week 3 → [Multi-Head Attention & Mini Transformer Block]**
   Extend attention into multi-heads, added feed-forward networks and layer normalization.
 - **Week 4 → [Mini-GPT: Character-Level Language Model]**
-  Build a decoder-only Transformer, trained it on a small dataset, and generated Shakespeare-style text.
+  Build a decoder-only Transformer, trained it on a small dataset, and generate Shakespeare-style text.
 
 ---
 
@@ -53,5 +53,5 @@ This page documents my journey, broken into weekly milestones — each link goes
 #### Phase 5: Branding & Consulting (Months 11–12)
 
 - **[Portfolio Wrap-Up]**
-  Compile projects into case studies, documented consulting-ready AI solutions, and published learnings.
+  Compile projects into case studies, document consulting-ready AI solutions, and published learnings.
 
