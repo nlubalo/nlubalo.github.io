@@ -116,11 +116,11 @@ p, li {
 }
 
 body {
-    padding-top: 70px; /* Adjust this value to be equal to your navbar's height */
+    padding-top: 40px; /* Adjust this value to be equal to your navbar's height */
 }
 
 .hero {
-  padding: 8rem 0;
+  padding: 4rem 0;
   background-color: var(--primary-bg);
 }
 
