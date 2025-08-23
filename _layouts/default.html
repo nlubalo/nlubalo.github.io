@@ -4,6 +4,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$'], ['\\[','\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    }
+  });
+</script>
     <title>{{page.title}} | {{site.name}}</title>
 
     {% seo %}
@@ -13,6 +24,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="{{site.baseurl}}/assets/css/syntax.css">
+    
 
     <!-- Bootstrap Modified -->
     <link rel="stylesheet" href="{{site.baseurl}}/assets/css/main.css">
