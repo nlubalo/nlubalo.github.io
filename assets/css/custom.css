@@ -249,6 +249,13 @@ a.btn-primary:focus {
     }
 }
 
+
+@media (max-width: 768px) {
+  .hero-image {
+    max-width: 200px !important;
+  }
+}
+
 .experience-list {
     margin-top: 2rem;
 }
