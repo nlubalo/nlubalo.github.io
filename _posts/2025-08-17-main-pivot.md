@@ -50,7 +50,18 @@ This page documents my journey, broken into weekly milestones — each link goes
 
 ---
 
-#### Phase 5: Branding & Consulting (Months 11–12)
+#### Phase 5: Deployment & Scaling (Months 11-12)
+
+- **[Deploying Models on AWS , Azure, GCP + Scaling Inference]**
+  Containerize Hugging Face models, deploy via AWS SageMaker / Lambda & Azure ML / Container Apps.
+  Explore autoscaling + cost optimization.
+- **[TensorRT for Optimized Inference]**
+  Convert a Hugging Face model (e.g., DistilBERT or GPT-2 small) into ONNX → TensorRT engine.
+  Run benchmarks comparing PyTorch vs ONNX vs TensorRT inference latency.
+  Deploy a TensorRT-optimized model in Docker on cloud GPU (AWS EC2 G4/G5, Azure NV-series, or GCP GPU)..
+---
+
+#### Phase 6: Branding & Consulting (Months 12–15)
 
 - **[Portfolio Wrap-Up]**
   Compile projects into case studies, document consulting-ready AI solutions, and published learnings.
