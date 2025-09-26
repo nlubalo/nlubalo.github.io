@@ -1,12 +1,14 @@
 - title: Senior Data Engineer
-  company: Ringier AG.
+  company: Ringier South Africa.
   dates: July 2023 - Present
   description:
-    - Designed and maintained large-scale data infrastructure supporting both batch and streaming pipelines for property listings, user behavior, and marketplace transactions — handling billions of records daily.
-    - Improved data pipeline reliability by 40% reducing data delivery latency and increasing platform data freshness through proactive validation, monitoring, and error recovery. 
-    - Owned data quality and governance across critical assets, including user engagement, lead generation, and listing performance — with strict controls around AWS access, S3 data lakes, and Redshift warehouses.-
-    - Mentored junior engineers and analysts, sharing best practices on marketplace data modeling, pipeline orchestration, and real-time feature engineering to support personalization and recommendations.
-
+    Property Data Infrastructure:
+      - Designed and engineered scalable data marts, reducing reporting turnaround time by 40% and enabling richer insights across property listings, customer interactions, and marketplace trends.
+    Customer & Listing Behavior Modeling:
+      - Built advanced data models to capture high-value property interactions (new listings, reactivations, conversions), directly supporting lead generation tracking and revenue growth.
+    Data Quality & Governance:
+      - Led investigations into root causes of broken listing hierarchies, mismatched agent-property relationships, and pricing inconsistencies, restoring 98% data integrity across millions of records.
+      - Implemented automated validation checks and alerting systems, cutting data issue resolution time from days to hours and enhancing trust in marketplace analytics.
 - title: Data Engineer
   company: Dalberg Data Insights.
   dates: Jan 2020 - June 2023

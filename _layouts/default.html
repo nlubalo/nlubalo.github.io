@@ -36,9 +36,11 @@
 
     <!-- Jquery on header to make sure everything works, the rest  of the scripts in footer for fast loading -->
     <script
+    
     src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
+
 
     {% include tracking-header.html %}
 
@@ -98,7 +100,9 @@
     </footer>
 
     {% include tracking-footer.html %}
-
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.js';
+</script>
 </body>
 
 </html>

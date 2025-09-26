@@ -15,7 +15,7 @@ body {
   background-color: var(--primary-bg);
   color: var(--text-color);
   font-family: var(--font-body);
-  font-weight: 300; /* Regular weight */
+  font-weight: 300;
   line-height: var(--line-height-body);
   padding-top: 70px;
 }
@@ -45,9 +45,9 @@ h4 { font-size: 1.5rem; }
 h5 { font-size: 1.25rem; }
 h6 { font-size: 1rem; }
 
-p, li {
+p {
   font-family: var(--font-body);
-  font-weight: 200; /* Light weight */
+  font-weight: 200;
   font-size: 1rem;
   line-height: var(--line-height-body);
   margin-bottom: 1rem;
@@ -55,15 +55,48 @@ p, li {
 }
 
 p.lead {
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 
-p::first-letter, article::first-letter {
-    font-size: 1em;
-    font-weight: normal;
-    float: none;
-    line-height: inherit;
-    margin: 0;
+ul, ol {
+  font-family: var(--font-body);
+  line-height: var(--line-height-body);
+  font-weight: 200;
+  margin-bottom: 1rem;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 0.25rem;
+  color: var(--text-color);
+}
+
+/*.post-content article p:first-of-type::first-letter,*/
+/*.post-content article p::first-letter {
+    font-weight: normal !important;
+    font-size: 1em !important;
+    float: none !important;
+    line-height: inherit !important;
+    margin: 0 !important;*/
+
+.job-description .category-title {
+  margin-left: 20px; /* Adjust this value to control the indentation */
+}
+pre, code {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9em;
+}
+
+pre {
+  background-color: #282c34; /* Dark background */
+  border: 1px solid #3a3f47; /* Slightly lighter border for contrast */
+  border-radius: 4px;
+  padding: 1em;
+  margin-top: 1em;
+  color: #f8f8f8; /* Light text for dark background */
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-x: auto;
 }
 
 /* Navigation & Header */
@@ -237,3 +270,5 @@ a.btn-primary:focus {
     flex: 0 0 50% !important;
     max-width: 50% !important;
 }
+
+

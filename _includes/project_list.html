@@ -1,0 +1,35 @@
+<div class="container-fluid px-5 mt-5">
+  <div class="row">
+    <div class="col-12 text-center mb-4">
+      <h2>What I’m Learning and building</h2>
+    </div>
+  </div>
+  <div class="row post-grid">
+    {% for post in site.categories.projects %}
+      {% unless post.url == page.url %}
+        <div class="mb-4">
+          <div class="post-card">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <a href="{{ post.url | relative_url }}">
+                  {% if post.image %}
+                    <img class="img-fluid rounded-start object-fit-cover" src="{{ post.image | relative_url }}" alt="{{ post.title }}">
+                  {% endif %}
+                </a>
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <a href="{{ post.url | relative_url }}" class="text-decoration-none text-dark">
+                    <h5 class="card-title">{{ post.title }}</h5>
+                  </a>
+                  <p class="card-text">{{ post.description }}</p>
+                  <a href="{{ post.url | relative_url }}" class="btn btn-primary btn-sm mt-3">View Project</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endunless %}
+    {% endfor %}
+  </div>
+</div>

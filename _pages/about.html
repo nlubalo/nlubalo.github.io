@@ -45,12 +45,35 @@ permalink: "/about.html"
             </summary>
       
             <div class="job-description">
-              <ul>
-            {% for point in job.description %}
-            <li>{{ point }}</li>
-            {% endfor %}
-            </ul>
-            </div>
+  {% assign has_categories = false %}
+  {% if job.description %}
+    {% for item in job.description %}
+      {% if item[1] %}
+        {% assign has_categories = true %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+
+  {% if has_categories %}
+    {% for category in job.description %}
+    <div class="category-title">
+      <strong>{{ category.first }}</strong>
+      </div>
+      <ul>
+        {% for point in category.last %}
+          <li>{{ point }}</li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
+  {% else %}
+    <ul>
+      {% for point in job.description %}
+        <li>{{ point }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</div>
           </details>
           {% endfor %}
         </div>
@@ -58,8 +81,8 @@ permalink: "/about.html"
         <h2 class="mt-5 text-center">Education</h2>
         <div class="education-list mb-5">
             <ul>
-                <li><strong>Master of Science in Information Technology</strong> - Carnegie Mellon University (2017-2019)</li>
-                <li><strong>Bachelor of Computer Science</strong> - Masinde Muliro University (2011-2015)</li>
+                <li><strong>Master of Science in Information Technology</strong> - Carnegie Mellon University</li>
+                <li><strong>Bachelor of Computer Science</strong> - Masinde Muliro University</li>
             </ul>
         </div>
 
