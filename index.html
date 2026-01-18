@@ -7,10 +7,13 @@ description: "Data Pro."
 ---
 
 {% if page.url == "/" %}
-  {% for post in site.posts %}
-    {% if post.tags contains "sticky" %}
-      {% include sticky-post.html post=post %}
-      {% break %}
-    {% endif %}
-  {% endfor %}
+  <div class="container sticky-posts-container mt-4">
+    <div class="row"> {% for post in site.posts %}
+        {% if post.tags contains "sticky" %}
+          <div class="col-md-4 d-flex mb-4"> {% include sticky-post.html post=post %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
 {% endif %}
