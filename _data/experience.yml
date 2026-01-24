@@ -13,10 +13,11 @@
   company: Dalberg Data Insights.
   dates: Jan 2020 - June 2023
   description:
-    -  Automated Data Workflows - Implemented Apache Airflow to automate data pipelines, increasing team productivity by 30% and ensuring critical tasks ran during off-peak hours, thereby reducing peak-time latency by 25%.
-    -  Scalable data processing - esigned and deployed a dockerized pipeline for a telecom client, efficiently processing 20 TB of call records daily and reducing processing time by 50%..
-    -  Enhanced Code Quality -  Restructured existing codebases and integrated CI/CD pipelines with unit testing and automated data checks, leading to a 40% improvement in data reliability and trustworthiness.
-
+    - Engineered and automated data pipelines processing millions of call detail records (CDRs) and mobile money logs, enabling gender-based insights at scale to support social and economic development initiatives.
+    - Designed and deployed scalable, dockerized pipelines for telecom clients, processing up to 20 TB of call records daily and reducing processing time by 50%.
+    - Developed automated workflows to measure the impact of development bank interventions on farmer livelihoods in Uganda, improving program evaluation accuracy and reducing manual reporting effort.
+    - Created a COVID-19 lockdown preparedness index for Uganda’s Ministry of Health, powering real-time dashboards that guided national pandemic response and resource allocation.
+    - Built and deployed ML models leveraging mobile phone data to estimate gender inequalities in Ghana’s labor markets, combining automation with advanced analytics to inform evidence-based policymaking.
 
 - title: Data Scientist
   company: Tabiri Analytics.

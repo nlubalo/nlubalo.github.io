@@ -1,11 +1,25 @@
+{% comment %} 
+  1. Determine which category to show. 
+  It looks at the current page's first category. 
+  If the page has no category, it defaults to 'projects'.
+{% endcomment %}
+
+{% assign current_cat = page.categories | first | default: "projects" %}
+
 <div class="container-fluid px-5 mt-5">
   <div class="row">
     <div class="col-12 text-center mb-4">
-      <h2>What I’m Learning and building</h2>
+      {% if current_cat == "Data Engineering" %}
+        <h2>More Data Engineering Insights</h2>
+      {% else %}
+        <h2>Related Projects & Learning</h2>
+      {% endif %}
     </div>
   </div>
+  
   <div class="row post-grid">
-    {% for post in site.categories.projects %}
+    {% comment %} Loop only through the category detected above {% endcomment %}
+    {% for post in site.categories[current_cat] %}
       {% unless post.url == page.url %}
         <div class="mb-4">
           <div class="post-card">

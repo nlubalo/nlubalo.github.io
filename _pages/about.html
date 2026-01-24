@@ -1,5 +1,5 @@
 ---
-title: "Authors"
+title: "About"
 layout: default
 permalink: "/about.html"
 ---
@@ -9,85 +9,101 @@ permalink: "/about.html"
 
     <div class="row g-4 align-items-center">
       <div class="col-md-4">
-        <img src="assets/images/nlubalo.jpeg" alt="Your Name" class="img-fluid mb-4 rounded about-hero-image">
+        <img src="assets/images/nlubalo.jpeg" alt="Nancy Lubalo" class="img-fluid mb-4 rounded about-hero-image">
       </div>
-      <class class="col-md-8">
+      <div class="col-md-8">
         <h2>About Me</h2>
-        <p>I'm Nancy - a Senior Data Engineer who turns messy data into businesses gold.
-          With 6+ years of experience from fullstack dev to AI-Powered analytics,
+        <p>I'm Nancy - a Senior Data Engineer who turns messy data into business gold.
+          With 6+ years of experience from fullstack dev to AI-powered analytics,
           I build pipelines, strategies and solutions that make data work harder for your business.
-          </p>
-          <p>I am fluent in PySpark, SQL, Python, dbt, cloud data platforms and data governance. I know how to pair that technical
-            expertise with AI and LLM-driven insights to unlock business growth </p>
-            <p> I live in the intersection of engineering, insights and innovation - where ideas turn into impact and complex problems find elegant, scalable solutions</p>
-</class>
-
+        </p>
+        <p>I am fluent in PySpark, SQL, Python, dbt, cloud data platforms and data governance. I know how to pair that
+          technical
+          expertise with AI and LLM-driven insights to unlock business growth.</p>
+        <p>I live in the intersection of engineering, insights and innovation - where ideas turn into impact and complex
+          problems find elegant, scalable solutions.</p>
       </div>
+
     </div>
-
-    <div class="row">
-      <div class="col-12">
-
-        <h2 class="mt-5 text-center">Skills</h2>
-        <div class="expertise-list text-center mb-5">
-            <span>SQL</span> | <span>AWS Cloud</span> | <span>Apache Iceberg</span> | <span>Data Analytics</span> | <span>Apache Spark</span> | <span>Palantir Foundry</span> | <span>Docker</span>  | <span>Agentic AI</span>
-        </div>
-
-        <h2 class="mt-5 text-center">Work Experience</h2>
-        <div class="experience-list">
-          {% for job in site.data.experience %}
-          <details class="experience-item">
-            <summary>
-              <div class="job-header">
-                <span class="job-title">{{ job.title }} at {{ job.company }}</span>
-                <span class="job-dates">{{ job.start_date }} - {{ job.end_date }}</span>
-              </div>
-            </summary>
-      
-            <div class="job-description">
-  {% assign has_categories = false %}
-  {% if job.description %}
-    {% for item in job.description %}
-      {% if item[1] %}
-        {% assign has_categories = true %}
-        {% break %}
-      {% endif %}
-    {% endfor %}
-  {% endif %}
-
-  {% if has_categories %}
-    {% for category in job.description %}
-    <div class="category-title">
-      <strong>{{ category.first }}</strong>
-      </div>
-      <ul>
-        {% for point in category.last %}
-          <li>{{ point }}</li>
-        {% endfor %}
-      </ul>
-    {% endfor %}
-  {% else %}
-    <ul>
-      {% for point in job.description %}
-        <li>{{ point }}</li>
-      {% endfor %}
-    </ul>
-  {% endif %}
-</div>
-          </details>
-          {% endfor %}
-        </div>
-
-        <h2 class="mt-5 text-center">Education</h2>
-        <div class="education-list mb-5">
-            <ul>
-                <li><strong>Master of Science in Information Technology</strong> - Carnegie Mellon University</li>
-                <li><strong>Bachelor of Computer Science</strong> - Masinde Muliro University</li>
-            </ul>
-        </div>
-
-      </div>
-    </div>
-    
   </div>
+
+  <div class="row">
+    <div class="col-12">
+
+      <h2 class="mt-5 text-center section-title">Core Expertise</h2>
+      <div class="expertise-list mb-5">
+        <span>PySpark</span>
+        <span>SQL</span>
+        <span>Python</span>
+        <span>dbt</span>
+        <span>AWS Cloud</span>
+        <span>Apache Iceberg</span>
+        <span>Apache Spark</span>
+        <span>Palantir Foundry</span>
+        <span>Docker</span>
+        <span>Agentic AI</span>
+        <span>RAG Systems</span>
+        <span>Data Governance</span>
+      </div>
+
+      <h2 class="mt-5 text-center section-title">Professional Experience</h2>
+      <div class="experience-list">
+        {% for job in site.data.experience %}
+        <details class="experience-card">
+          <summary>
+            <div class="job-header">
+              <div class="job-main">
+                <span class="job-title">{{ job.title }}</span>
+                <span class="job-company">@ {{ job.company }}</span>
+              </div>
+              <span class="job-dates">{{ job.start_date }} — {{ job.end_date }}</span>
+            </div>
+          </summary>
+
+          <div class="job-description">
+            {% assign has_categories = false %}
+            {% if job.description %}
+            {% for item in job.description %}
+            {% if item[1] %}
+            {% assign has_categories = true %}
+            {% break %}
+            {% endif %}
+            {% endfor %}
+            {% endif %}
+
+            {% if has_categories %}
+            {% for category in job.description %}
+            <div class="category-title">
+              <strong>{{ category.first }}</strong>
+            </div>
+            <ul>
+              {% for point in category.last %}
+              <li>{{ point }}</li>
+              {% endfor %}
+            </ul>
+            {% endfor %}
+            {% else %}
+            <ul>
+              {% for point in job.description %}
+              <li>{{ point }}</li>
+              {% endfor %}
+            </ul>
+            {% endif %}
+          </div>
+        </details>
+        {% endfor %}
+      </div>
+
+      <h2 class="mt-5 text-center">Education</h2>
+      <div class="education-list mb-5">
+        <ul>
+          <li><strong>Master of Science in Information Technology</strong> - Carnegie Mellon University</li>
+          <li><strong>Bachelor of Computer Science</strong> - Masinde Muliro University</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+</div>
 </div>
