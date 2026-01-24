@@ -245,6 +245,12 @@ ol {
   padding-left: var(--spacing-lg);
 }
 
+ol li::marker {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-heading);
+}
+
 li {
   margin-bottom: var(--spacing-xs);
   color: var(--color-dark-700);
@@ -885,6 +891,11 @@ pre code {
   margin: 0 auto;
   font-size: var(--font-size-lg);
   line-height: var(--line-height-relaxed);
+}
+
+.post-content ul,
+.post-content ol {
+  font-size: var(--font-size-base);
 }
 
 .post-content h2,
