@@ -54,7 +54,7 @@
   /* Gradients */
   --gradient-primary: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
   --gradient-accent: linear-gradient(135deg, var(--color-accent) 0%, var(--color-primary) 100%);
-  --gradient-hero: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-hero: linear-gradient(135deg, var(--color-gray) 0%, var(--color-dark) 100%);
   --gradient-dark: linear-gradient(180deg, var(--color-dark) 0%, var(--color-dark-800) 100%);
 
   /* Typography */
@@ -127,7 +127,7 @@
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
   --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  --shadow-glow: 0 0 20px rgba(99, 102, 241, 0.3);
+  --shadow-glow: 0 0 20px rgba(229, 193, 0, 0.3);
 
   /* Transitions */
   --transition-fast: 150ms ease-in-out;
@@ -159,7 +159,7 @@ body {
   color: var(--color-dark);
   font-family: var(--font-body);
   font-size: var(--font-size-base);
-  font-weight: var(--font-weight-normal);
+  font-weight: var(--font-weight-light);
   line-height: var(--line-height-normal);
   padding-top: 70px;
   overflow-x: hidden;
@@ -429,25 +429,14 @@ pre code {
 
 .hero {
   padding: var(--spacing-4xl) 0;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: var(--color-light-50);
   position: relative;
   overflow: hidden;
   margin-top: -70px;
   padding-top: calc(var(--spacing-4xl) + 70px);
 }
 
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image:
-    radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
-  pointer-events: none;
-}
+
 
 .hero .container {
   position: relative;
@@ -457,17 +446,17 @@ pre code {
 .hero h1,
 .hero h2,
 .hero h3 {
-  color: var(--color-white);
+  color: var(--color-dark);
   margin-top: 0;
 }
 
 .hero p {
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--color-dark-700);
   font-size: var(--font-size-lg);
 }
 
 .hero .text-accent {
-  color: var(--color-accent-light);
+  color: var(--color-primary);
   font-weight: var(--font-weight-bold);
   position: relative;
   display: inline-block;
