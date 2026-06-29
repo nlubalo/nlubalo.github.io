@@ -1,0 +1,461 @@
+---
+title: "Contact"
+layout: default
+permalink: "/contact.html"
+---
+
+<style>
+/* ── Reset scoped to contact page ── */
+.contact-page-header, .contact-body, .contact-inner,
+.connect-panel, .form-panel, .contact-links, .contact-link,
+.contact-form-row, .contact-form-group, .availability-badge,
+.form-success, .btn-contact-submit {
+  box-sizing: border-box;
+}
+
+/* ── Header ── */
+.contact-page-header {
+  background: #0D1B2A !important;
+  padding: 5rem 2rem 4rem;
+  text-align: center;
+  margin-top: -30px; /* cancel .site-content margin */
+}
+
+.contact-eyebrow {
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #00C9B1 !important;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.contact-page-header h1 {
+  font-family: 'Outfit', sans-serif !important;
+  font-size: clamp(2rem, 4vw, 2.8rem) !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+  line-height: 1.15 !important;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.contact-page-header > p {
+  font-size: 1.0625rem !important;
+  color: rgba(255,255,255,0.55) !important;
+  max-width: 480px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ── Body ── */
+.contact-body {
+  padding: 5rem 2rem;
+  background: #ffffff;
+}
+
+.contact-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid !important;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+/* ── Left panel ── */
+.contact-section-label {
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #00A896 !important;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.connect-panel h2,
+.form-panel h2 {
+  font-family: 'Outfit', sans-serif !important;
+  font-size: 1.75rem !important;
+  font-weight: 700 !important;
+  color: #0D1B2A !important;
+  line-height: 1.2 !important;
+  margin-top: 0 !important;
+  margin-bottom: 1rem !important;
+}
+
+.connect-panel > p,
+.form-panel > p {
+  font-size: 0.9875rem !important;
+  color: #6B7A8A !important;
+  line-height: 1.75;
+  margin-bottom: 2rem;
+}
+
+.contact-links {
+  display: flex !important;
+  flex-direction: column;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+.contact-link {
+  display: flex !important;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid #E2E8ED !important;
+  border-radius: 12px;
+  text-decoration: none !important;
+  background: #F7F6F2 !important;
+  color: inherit !important;
+  transition: border-color 0.2s, background 0.2s, transform 0.15s;
+}
+
+.contact-link:hover {
+  border-color: #6366f1 !important;
+  background: #eef2ff !important;
+  transform: translateX(4px);
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+.contact-link-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: #0D1B2A !important;
+  flex-shrink: 0;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.contact-link-info {
+  flex: 1;
+}
+
+.contact-link-info strong {
+  display: block !important;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #0D1B2A !important;
+  margin-bottom: 0.15rem;
+  font-family: 'Outfit', sans-serif;
+}
+
+.contact-link-info span {
+  font-size: 0.8rem;
+  color: #6B7A8A !important;
+}
+
+.contact-link-arrow {
+  margin-left: auto;
+  font-size: 1rem;
+  color: #6B7A8A !important;
+  transition: transform 0.2s, color 0.2s;
+  flex-shrink: 0;
+}
+
+.contact-link:hover .contact-link-arrow {
+  transform: translateX(3px);
+  color: #6366f1 !important;
+}
+
+.availability-badge {
+  margin-top: 2rem;
+  display: inline-flex !important;
+  align-items: center;
+  gap: 0.5rem;
+  background: #eef2ff !important;
+  border: 1px solid rgba(99,102,241,0.25) !important;
+  border-radius: 9999px;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #6366f1 !important;
+  font-family: 'Outfit', sans-serif;
+}
+
+.availability-badge::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #6366f1;
+  flex-shrink: 0;
+  animation: cPulse 2.4s ease-in-out infinite;
+}
+
+@keyframes cPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(0.7); }
+}
+
+/* ── Form ── */
+.contact-form-row {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.contact-form-group {
+  margin-bottom: 1.25rem;
+}
+
+.contact-form-group label {
+  display: block !important;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #0D1B2A !important;
+  margin-bottom: 0.4rem;
+  font-family: 'Outfit', sans-serif;
+  letter-spacing: 0.02em;
+}
+
+.contact-form-group input[type="text"],
+.contact-form-group input[type="email"],
+.contact-form-group select,
+.contact-form-group textarea {
+  display: block !important;
+  width: 100% !important;
+  background: #F7F6F2 !important;
+  border: 1px solid #E2E8ED !important;
+  border-radius: 8px !important;
+  padding: 0.7rem 1rem !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 0.9rem !important;
+  color: #1C2B3A !important;
+  outline: none !important;
+  box-shadow: none !important;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+  appearance: none;
+  -webkit-appearance: none;
+  line-height: 1.5;
+}
+
+.contact-form-group input:focus,
+.contact-form-group select:focus,
+.contact-form-group textarea:focus {
+  border-color: #6366f1 !important;
+  background: #ffffff !important;
+  box-shadow: 0 0 0 3px rgba(99,102,241,0.12) !important;
+  outline: none !important;
+}
+
+.contact-form-group textarea {
+  resize: vertical;
+  min-height: 130px;
+  line-height: 1.65;
+}
+
+.contact-form-group select { cursor: pointer; }
+
+.btn-contact-submit {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  background: #0D1B2A !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 8px;
+  padding: 0.9rem 1.5rem;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background 0.2s, transform 0.15s;
+  box-shadow: none !important;
+}
+
+.btn-contact-submit:hover {
+  background: #1C2B3A !important;
+  color: #fff !important;
+  transform: translateY(-1px);
+}
+
+.form-note {
+  text-align: center;
+  margin-top: 0.75rem;
+  font-size: 0.775rem;
+  color: #6B7A8A !important;
+}
+
+.form-success {
+  display: none !important;
+  text-align: center;
+  padding: 2.5rem 1rem;
+}
+
+.form-success.visible {
+  display: block !important;
+}
+
+.form-success .success-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #E0FAF7;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #00A896 !important;
+  margin: 0 auto 1rem;
+}
+
+.form-success h3 {
+  font-family: 'Outfit', sans-serif !important;
+  font-size: 1.1rem !important;
+  font-weight: 700 !important;
+  color: #0D1B2A !important;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+.form-success p {
+  font-size: 0.9rem;
+  color: #6B7A8A !important;
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .contact-inner    { grid-template-columns: 1fr !important; gap: 3rem; }
+  .contact-form-row { grid-template-columns: 1fr !important; }
+  .contact-body     { padding: 3rem 1.25rem; }
+}
+</style>
+
+<div class="contact-page-header">
+  <p class="contact-eyebrow">Get in touch</p>
+  <h1>Have a data problem<br />worth solving?</h1>
+  <p>Whether it's pipeline architecture, AI system design, or a collaboration — I'm open to conversations about interesting problems.</p>
+</div>
+
+<div class="contact-body">
+  <div class="contact-inner">
+
+    <div class="connect-panel">
+      <p class="contact-section-label">Connect</p>
+      <h2>Let's talk data, AI, or East African tech.</h2>
+      <p>I'm particularly interested in opportunities at the intersection of data engineering and LLMs, consulting on data platform design, and collaborating with teams building in Africa.</p>
+
+      <div class="contact-links">
+        <a href="https://linkedin.com/in/nlubalo" target="_blank" rel="noopener" class="contact-link">
+          <div class="contact-link-icon">💼</div>
+          <div class="contact-link-info">
+            <strong>LinkedIn</strong>
+            <span>linkedin.com/in/nlubalo</span>
+          </div>
+          <span class="contact-link-arrow">→</span>
+        </a>
+
+        <a href="https://github.com/nlubalo" target="_blank" rel="noopener" class="contact-link">
+          <div class="contact-link-icon">💻</div>
+          <div class="contact-link-info">
+            <strong>GitHub</strong>
+            <span>github.com/nlubalo</span>
+          </div>
+          <span class="contact-link-arrow">→</span>
+        </a>
+
+        <a href="{{ site.baseurl }}/categories.html" class="contact-link">
+          <div class="contact-link-icon">✍️</div>
+          <div class="contact-link-info">
+            <strong>Blog</strong>
+            <span>nlubalo.github.io</span>
+          </div>
+          <span class="contact-link-arrow">→</span>
+        </a>
+      </div>
+
+      <div class="availability-badge">Open to new opportunities</div>
+    </div>
+
+    <div class="form-panel">
+      <p class="contact-section-label">Send a message</p>
+      <h2>Drop me a line</h2>
+      <p>I read every message and reply within a few days.</p>
+
+      <form id="contact-form" action="https://formspree.io/f/xbdvkdda" method="POST">
+        <div class="contact-form-row">
+          <div class="contact-form-group">
+            <label for="name">Your name</label>
+            <input type="text" id="name" name="name" placeholder="Nancy Lubalo" required />
+          </div>
+          <div class="contact-form-group">
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" placeholder="email@example.com" required />
+          </div>
+        </div>
+
+        <div class="contact-form-group">
+          <label for="topic">What's this about?</label>
+          <select id="topic" name="topic">
+            <option value="" disabled selected>Choose a topic</option>
+            <option value="role">Job opportunity</option>
+            <option value="consulting">Data consulting</option>
+            <option value="collaboration">Project collaboration</option>
+            <option value="speaking">Speaking / writing</option>
+            <option value="other">Something else</option>
+          </select>
+        </div>
+
+        <div class="contact-form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" placeholder="Tell me about your data challenge or what you'd like to explore together..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn-contact-submit">
+          Send message <span>→</span>
+        </button>
+        <p class="form-note">No spam, no newsletters. Just a conversation.</p>
+      </form>
+
+      <div class="form-success" id="form-success">
+        <div class="success-icon">✓</div>
+        <h3>Message sent</h3>
+        <p>Thanks for reaching out — I'll get back to you within a few days.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  const form = document.getElementById('contact-form');
+  const success = document.getElementById('form-success');
+
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const btn = form.querySelector('.btn-contact-submit');
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        form.style.display = 'none';
+        success.classList.add('visible');
+      } else {
+        btn.innerHTML = 'Try again <span>→</span>';
+        btn.disabled = false;
+      }
+    } catch {
+      btn.innerHTML = 'Try again <span>→</span>';
+      btn.disabled = false;
+    }
+  });
+</script>
