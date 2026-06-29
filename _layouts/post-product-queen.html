@@ -1,18 +1,65 @@
 ---
 layout: default
 ---
-<div class="container-lg pt-4 pb-4">
-    <div class="row justify-content-center">
-        <div class="col-md-12 col-lg-8">
-            <div class="post-hero text-center mb-3">
-                <h1 class="post-title mt-0 mb-2">{{ page.title }}</h1>
-                <p class="post-meta">{{ page.date | date: '%B %d, %Y' }}</p>
-            </div>
-            <article class="article-post post-content">
-                {{ content }}
-            </article>
+<div class="container-lg post-wrapper">
+  <div class="row justify-content-center">
+    <div class="col-md-12 col-lg-8">
+
+      <header class="post-header">
+        {% if page.categories[0] %}
+        <a href="{{ site.baseurl }}/categories.html#{{ page.categories[0] | downcase }}"
+           class="post-series-badge">
+          {{ page.categories[0] | replace: '-', ' ' | capitalize }}
+        </a>
+        {% endif %}
+
+        <h1 class="post-title">{{ page.title }}</h1>
+
+        <div class="post-meta-row">
+          <span>{{ page.date | date: '%B %d, %Y' }}</span>
+          <span class="meta-dot">·</span>
+          {% include meta-read-time.html %}
         </div>
+      </header>
+
+      {% if page.image %}
+      <div class="post-cover">
+        <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" class="img-fluid">
+      </div>
+      {% endif %}
+
+      <article class="article-post post-content">
+        {{ content }}
+      </article>
+
+      <footer class="post-series-footer">
+        <div class="series-footer-inner">
+          {% if page.categories[0] %}
+          <p>Part of the
+            <a href="{{ site.baseurl }}/categories.html#{{ page.categories[0] | downcase }}">
+              {{ page.categories[0] | replace: '-', ' ' | capitalize }}
+            </a> series
+          </p>
+          {% endif %}
+          <div class="post-nav">
+            {% if page.previous.url %}
+            <a class="post-nav-link prev" href="{{ site.baseurl }}{{ page.previous.url }}">
+              <span class="nav-direction">← Previous</span>
+              <span class="nav-title">{{ page.previous.title }}</span>
+            </a>
+            {% endif %}
+            {% if page.next.url %}
+            <a class="post-nav-link next" href="{{ site.baseurl }}{{ page.next.url }}">
+              <span class="nav-direction">Next →</span>
+              <span class="nav-title">{{ page.next.title }}</span>
+            </a>
+            {% endif %}
+          </div>
+        </div>
+      </footer>
+
     </div>
+  </div>
 </div>
 
 {% include project_list.html %}
