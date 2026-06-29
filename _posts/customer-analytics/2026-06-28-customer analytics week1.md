@@ -9,9 +9,9 @@ I recently started the Wharton Customer Analytics course on Coursera. This post 
 
 ---
 ## What is Descriptive Analytics
-<>Descriptive analytics is the practice of collecting and summarizing historical customer data to understand what has happened in a business. Rather than predicting the future or recommending actions, it focuses on turning raw data into a clear picture giving decision-makers a solid factual base to wok from
+Descriptive analytics is the practice of collecting and summarizing historical customer data to understand what has happened in a business. Rather than predicting the future or recommending actions, it focuses on turning raw data into a clear picture giving decision-makers a solid factual base to wok from
 
-<>Think of it as answering the question: "What happened, and to whom?"
+Think of it as answering the question: "What happened, and to whom?"
 
 ---
 
@@ -41,7 +41,7 @@ Once data is collected, descriptive analytics helps businesses:
 
 Two practical examples from the course stood out:
 
-- **Net Promoter Score (NPS)** — a survey-based metric that summarizes customer satisfaction and loyalty in a single number. It's derived from one simple question. ** On a scale of 1 to 10 How likely
+- **Net Promoter Score (NPS)** — a survey-based metric that summarizes customer satisfaction and loyalty in a single number. It's derived from one simple question. **On a scale of 1 to 10 How likely
 are you to recommend this service/product/company to a friend?** People who say 9 or 10 are called **promoters**, those who say 7 or 8 are **passive** and those who say 0 to 6 are **detractors**
 The Net Promoter Score is calculated by subtracting the percentage of detractors from the percentage of promoters. This score helps businesses understand how happy their customers are and how strong their brand is.
 - **Media planning effectiveness** — analyzing which channels and campaigns drove the most customer engagement or conversions
